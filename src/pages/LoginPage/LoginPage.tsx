@@ -1,10 +1,10 @@
 import LoginForm from "../../components/LoginForm/LoginForm"
-import './LoginPage.module.css'
+import c from './LoginPage.module.css'
 
 export default function LoginPage() {
     return (
         <>
-            <h2>Login</h2>
+            <h2 className={c.header}>Login</h2>
             <LoginForm />
         </>
     )
