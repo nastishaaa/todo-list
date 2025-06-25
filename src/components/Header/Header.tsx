@@ -3,7 +3,7 @@ import { useAppDispatch, useAppSelector } from "../../redux/hooks"
 import { logout } from "../../redux/auth/operations"
 import toast from "react-hot-toast"
 import { selectIsLoggedIn } from "../../redux/auth/selectors"
-import './Header.module.css'
+import c from './Header.module.css'
 
 export const Header = () => {
     const dispatch = useAppDispatch();
@@ -15,7 +15,7 @@ export const Header = () => {
     }
     return (
         <>
-            <nav >
+            <nav className={c.nav}>
                 <NavLink to='/'>Home Page</NavLink>
                 <NavLink to='/registration'>Registration Page</NavLink>
                 <NavLink to='/login'>Login Page</NavLink>

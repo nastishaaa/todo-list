@@ -6,7 +6,7 @@ import { useId } from 'react';
 import toast from 'react-hot-toast';
 import type { FormValues } from '../RegistrationForm/RegistrationForm';
 import { Link, useNavigate } from 'react-router-dom';
-import './LoginForm.module.css'
+import c from './LoginForm.module.css'
 
 const FeedbackSchema = Yup.object().shape({
     email: Yup.string().matches(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/, 'Invalid email').required('Requaried'),
@@ -49,22 +49,26 @@ export default function LoginForm () {
                 validationSchema={FeedbackSchema}
                 onSubmit={handleSubmit}>
 
-                <Form >
-                    <label htmlFor={emailField}>Email</label>
-                    <Field type='email'
+                <Form className={c.form}>
+                    <label className={c.label} htmlFor={emailField}>Email</label>
+                    <Field
+                        className={c.input}
+                        type='email'
                         name='email'
                         id={emailField}
                         autoComplete='off' />
                     <ErrorMessage name='email' component='span'></ErrorMessage>
                         
-                    <label htmlFor={passwordField}>Password</label>
-                    <Field type='password'
+                    <label className={c.label} htmlFor={passwordField}>Password</label>
+                    <Field
+                        className={c.input}
+                        type='password'
                         name='password'
                         id={passwordField}
                         autoComplete='off' />
                     <ErrorMessage name='password' component='span'></ErrorMessage>
                         
-                    <button type='submit'>Log in</button>
+                    <button className={c.button} type='submit'>Log in</button>
                 </Form>
             </Formik>
             <div><Link to='/registration'>Don't have an account yet? Register!</Link></div>

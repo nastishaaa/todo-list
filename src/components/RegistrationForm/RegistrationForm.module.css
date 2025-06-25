@@ -1,4 +1,4 @@
-form {
+.form {
     max-width: 400px;
     margin: 40px auto;
     padding: 24px;
@@ -10,29 +10,29 @@ form {
     gap: 16px;
 }
 
-label {
+.label {
     font-weight: 600;
     margin-bottom: 4px;
 }
 
-input {
+.input {
     padding: 8px;
     border-radius: 4px;
     border: 1px solid #bbb;
     font-size: 14px;
 }
 
-input:focus {
+.input:focus {
     border-color: #007bff;
     outline: none;
 }
 
-span {
+.span {
     color: red;
     font-size: 12px;
 }
 
-button[type="submit"] {
+.button {
     padding: 10px;
     background-color: #007bff;
     color: white;
@@ -43,11 +43,11 @@ button[type="submit"] {
     transition: background-color 0.3s;
 }
 
-button[type="submit"]:hover {
+.button[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-div a {
+.div a {
     display: block;
     margin: 16px auto;
     text-align: center;
@@ -55,6 +55,6 @@ div a {
     text-decoration: none;
 }
 
-div a:hover {
+.div a:hover {
     text-decoration: underline;
 }

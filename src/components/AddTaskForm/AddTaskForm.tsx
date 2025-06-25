@@ -3,7 +3,7 @@ import * as Yup from 'yup';
 import { useId } from "react";
 import { useAppDispatch } from "../../redux/hooks";
 import { addTodo } from "../../redux/todos/operations";
-import './AddTaskForm.module.css'
+import c from './AddTaskForm.module.css'
 
 interface todoValues {
     name: string,
@@ -36,16 +36,16 @@ return (
             validationSchema={FeedbackSchema}
             onSubmit={handleSubmit}>
             
-            <Form >
-                <label htmlFor={nameField}>Name</label>
-                <Field
+            <Form className={c.form}>
+                <label className={c.label} htmlFor={nameField}>Name</label>
+                <Field className={c.input}
                     name='name'
                     id={nameField}
                     autoComplete='off' />
                 <ErrorMessage name='todoName' component='span'></ErrorMessage>
                                     
-                <label htmlFor={descriptionField}>Description</label>
-                <Field
+                <label className={c.label} htmlFor={descriptionField}>Description</label>
+                <Field className={c.input}
                     name='description'
                     id={descriptionField}
                     autoComplete='off' />

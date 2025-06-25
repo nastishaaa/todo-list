@@ -5,7 +5,7 @@ import * as Yup from 'yup';
 import toast from 'react-hot-toast';
 import { useId } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import './RegistrationForm.module.css'
+import c from './RegistrationForm.module.css'
 
 export type FormValues = {
     name: string;
@@ -51,22 +51,24 @@ export default function RegisterForm () {
                 validationSchema={FeedbackSchema}
                 onSubmit={handleSubmit}>
 
-                <Form>
-                    <label htmlFor={emailField}>Email</label>
-                    <Field type='email'
+                <Form className={c.form}>
+                    <label className={c.label} htmlFor={emailField}>Email</label>
+                    <Field
+                        className={c.input}
+                        type='email'
                         name='email'
                         id={emailField}
                         autoComplete='off' />
                     <ErrorMessage name='email' component='span'></ErrorMessage>
                         
-                    <label  htmlFor={passwordField}>Password</label>
-                    <Field type='password'
+                    <label  className={c.label} htmlFor={passwordField}>Password</label>
+                    <Field  className={c.input} type='password'
                         name='password'
                         id={passwordField}
                         autoComplete='off' />
                     <ErrorMessage name='password' component='span'></ErrorMessage>
                         
-                    <button type='submit'>Register</button>
+                    <button className={c.button} type='submit'>Register</button>
                 </Form>
             </Formik>
             <div><Link to='/login'>Already have an account? Log in!</Link></div>

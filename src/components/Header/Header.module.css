@@ -1,4 +1,4 @@
-nav {
+.nav {
     background-color: #f0f0f0;
     padding: 16px;
     display: flex;
@@ -6,17 +6,17 @@ nav {
     align-items: center;
 }
 
-nav a {
+.nav a {
     color: #007bff;
     text-decoration: none;
     font-weight: 500;
 }
 
-nav a:hover {
+.nav a:hover {
     text-decoration: underline;
 }
 
-nav button {
+.nav button {
     background-color: #dc3545;
     color: white;
     border: none;
@@ -25,7 +25,7 @@ nav button {
     cursor: pointer;
 }
 
-nav button:disabled {
+.nav button:disabled {
     background-color: #ccc;
     cursor: not-allowed;
 }
