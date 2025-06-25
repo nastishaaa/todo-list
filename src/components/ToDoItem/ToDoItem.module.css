@@ -1,0 +1,34 @@
+
+.todoItem {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+    background-color: #f9f9f9;
+}
+
+.todoItem h4 {
+    margin: 0 0 8px;
+    color: #333;
+    font-size: 18px;
+}
+
+.todoItem p {
+    margin: 0 0 12px;
+    color: #555;
+    font-size: 14px;
+}
+
+.todo-item button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.todo-item button:hover {
+    background-color: #b52a38;
+}

@@ -1,0 +1,10 @@
+.todos-list {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+.todos-list li {
+    margin-bottom: 16px;
+}
